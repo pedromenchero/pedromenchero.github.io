@@ -181,7 +181,7 @@ hr {
 	-o-background-size: cover;
 }
 .section-title.center {
-	padding: 25px 0 45px 0;
+	padding: 25px 0 15px 0;
 }
 /* About Section */
 #about {
@@ -382,16 +382,17 @@ ol.type li a:hover {
 /* Achivements Section */
 #achievements {
 	padding: 100px 0;
-	background: #d1232b;;
+	background: #f6f6f6;;
 }
 #achievements h2 {
-	color: #fff;
+	color: #121d1f;
 }
-#achievements hr {
-	background: rgba(255,255,255,0.3);
-}
+/* #achievements hr { */
+	/* background: rgba(255,255,255,0.3); */
+/* } */
+
 .achievement-box h4 {
-	color: #fff;
+	color: #d1232b;
 	font-size: 20px;
 	font-weight: 400;
 	margin-left: 5px;
