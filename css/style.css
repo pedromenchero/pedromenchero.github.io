@@ -198,9 +198,12 @@ hr {
 	display: inline-block;
 }
 #about p {
-	text-align: justify;
+	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 30px;
+}
+#about .justify {
+	text-align: justify;
 }
 /* Skills Section */
 #skills {
