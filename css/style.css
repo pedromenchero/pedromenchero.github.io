@@ -237,7 +237,7 @@ hr {
 .percent {
 	display: inline-block;
 	font-size: 21px;
-	color: #121d1f;
+	color: #d1232b;
 	line-height: 152px;
 	z-index: 2;
 }
@@ -513,19 +513,19 @@ ol.type li a:hover {
 #contact {
 	padding: 100px 0 40px 0;
 	color: #121d1f;
-	background: #d1232b;;
+	background: #fafafa;;
 }
 #contact h2 {
-	color: #fff;
+	color: #000;
 }
 #contact hr {
-	background: rgba(255,255,255,0.3);
+	/* background: rgba(255,255,255,0.3); */
 }
 #contact h3 {
 	padding-top: 20px;
 	font-size: 20px;
 	font-weight: 400;
-	color: #fff;
+	color: #000;
 }
 #contact form {
 	padding: 30px 0;
@@ -589,11 +589,11 @@ color: #2c3e50;
 #contact .social i.fa {
 	font-size: 30px;
 	padding: 4px 5px;
-	color: #fff;
+	color: #000;
 	transition: all 0.5s;
 }
 #contact .social i.fa:hover {
-	color: #121d1f;
+	color: #d1232b;
 }
 #contact .btn {
 	background-color: transparent;

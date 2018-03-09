@@ -26,6 +26,10 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
+<!-- Skype
+    ================================================== -->
+<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -380,19 +384,19 @@
       <hr>
     </div>
     <div class="col-md-8 col-md-offset-2">
-      <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
-        <p>4321 California St,<br>
-          San Francisco, CA 12345</p>
+      <div class="col-md-6"> <i class="fa fa-map-marker fa-2x"></i>
+        <p>Calle Palenque, 2. Bajo 3<br>
+          28231 Las Rozas de Madrid</p>
       </div>
-      <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
-        <p>info@company.com</p>
+      <div class="col-md-6"> <i class="fa fa-envelope-o fa-2x"></i>
+        <p>pedro.menchero@gmail.com</p>
       </div>
-      <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
-        <p> +1 123 456 1234</p>
-      </div>
+      <!-- <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i> -->
+        <!-- <p>+34 617 00 77 43</p> -->
+      <!-- </div> -->
       <div class="clearfix"></div>
     </div>
-    <div class="col-md-8 col-md-offset-2">
+    <!-- <div class="col-md-8 col-md-offset-2">
       <h3>Leave me a message</h3>
       <form name="sentMessage" id="contactForm" novalidate>
         <div class="row">
@@ -415,24 +419,28 @@
         </div>
         <div id="success"></div>
         <button type="submit" class="btn btn-default">Send Message</button>
-      </form>
-      <div class="social">
-        <ul>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li><a href="#"><i class="fa fa-github"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
+      </form> -->
       </div>
+      <div class="container">
+        <div class="social">
+          <ul>
+            <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+            <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+            <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+            <li><a onclick="Skype.tryAnalyzeSkypeUri('chat', '0');" href="skype:pedro.menchero?chat"><i class="fa fa-skype"></i></a></li>
+            <!-- <li><a href="#"><i class="fa fa-google"></i></a></li> -->
+            <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+            <li><a href="https://www.linkedin.com/in/pedromenchero/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/pedromenchero" target="_blank"><i class="fa fa-github"></i></a></li>
+          </ul>
+        </div>
     </div>
   </div>
 </div>
 <div id="footer">
   <div class="container text-center">
     <div class="fnav">
-      <p>Copyright &copy; 2016 John Doe. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+      <p>Copyright &copy; 2018 <a>Pedro Menchero</a></p>
     </div>
   </div>
 </div>
