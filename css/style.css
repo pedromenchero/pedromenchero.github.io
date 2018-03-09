@@ -644,7 +644,6 @@ ol.type li a:hover {
   padding: 50px 0 50px 0;
   color: #121d1f;
   background: #fafafa;
-  ;
 }
 
 #references .row {
@@ -655,6 +654,7 @@ ol.type li a:hover {
   font-family: Georgia, serif;
   font-size: 18px;
   font-style: italic;
+  text-align: justify;
   /* width: 500px; */
   margin: 0.25em 0;
   padding: 0.35em 40px;
