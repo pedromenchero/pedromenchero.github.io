@@ -36,6 +36,7 @@ $('#nav').affix({
       if(index==0){
         $('.chart').easyPieChart({
           easing: 'easeOutBounce',
+          barColor: '#d1232b',
           onStep: function(from, to, percent) {
             $(this.el).find('.percent').text(Math.round(percent));
           }
@@ -57,6 +58,7 @@ $('#nav').affix({
   			if(index==0){
   				$('.chart').easyPieChart({
   					easing: 'easeOutBounce',
+            barColor: '#d1232b',
   					onStep: function(from, to, percent) {
   						$(this.el).find('.percent').text(Math.round(percent));
   					}
