@@ -90,10 +90,13 @@ hr {
   text-align: center;
   position: relative;
   background: #d1232b;
-  ;
   margin: 0 auto;
   margin-bottom: 30px;
   border: 0;
+}
+
+hr.blue {
+  background: #629ca7
 }
 
 /* Navigation */
@@ -270,7 +273,7 @@ hr {
 }
 
 #skills hr {
-  background: rgba(255, 255, 255, 0.3);
+  /* background: rgba(255, 255, 255, 0.3); */
 }
 
 #skills .skill {
