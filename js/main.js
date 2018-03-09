@@ -26,30 +26,47 @@ $('#nav').affix({
 
 	// skills chart
 	$(document).ready(function(e) {
-	//var windowBottom = $(window).height();
-	var index=0;
-	$(document).scroll(function(){
-		var top = $('#about').outerHeight()+$(window).scrollTop();
-    var skills = $('#skills-circles').position().top;
-    // console.log("About > " + $('#about').height());
-    // console.log("Skills height > " + $('#skills-circles').height());
-    // console.log("Skills top > " + $('#skills-circles').position().top);
-    // console.log("Scroll Top > " + $(window).scrollTop());
-		// console.log("Top > " + top);
-		if(top >= skills * 1.05){
-			if(index==0){
-				$('.chart').easyPieChart({
-					easing: 'easeOutBounce',
-					onStep: function(from, to, percent) {
-						$(this.el).find('.percent').text(Math.round(percent));
-					}
-				});
+  	//var windowBottom = $(window).height();
+  	var index=0;
 
-				}
-			index++;
-		}
-	})
-	//console.log(nagativeValue)
+    // console.log($(window).height());
+    // console.log($('#skills-circles').position().top);
+
+    if ($(window).height() > $('#skills-circles').position().top) {
+      if(index==0){
+        $('.chart').easyPieChart({
+          easing: 'easeOutBounce',
+          onStep: function(from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+          }
+        });
+
+        }
+        index++
+    }
+
+  	$(document).scroll(function(){
+  		var top = $('#about').outerHeight()+$(window).scrollTop();
+      var skills = $('#skills-circles').position().top;
+      // console.log("About > " + $('#about').height());
+      // console.log("Skills height > " + $('#skills-circles').height());
+      // console.log("Skills top > " + $('#skills-circles').position().top);
+      // console.log("Scroll Top > " + $(window).scrollTop());
+  		// console.log("Top > " + top);
+  		if(top >= skills * 1.05){
+  			if(index==0){
+  				$('.chart').easyPieChart({
+  					easing: 'easeOutBounce',
+  					onStep: function(from, to, percent) {
+  						$(this.el).find('.percent').text(Math.round(percent));
+  					}
+  				});
+
+  				}
+  			  index++;
+  		}
+  	})
+  	//console.log(nagativeValue)
 	});
 
 
