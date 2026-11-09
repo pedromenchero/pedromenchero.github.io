@@ -13,12 +13,15 @@
   <meta property="og:title" content="Pedro Menchero, ServiceNow solution architect">
   <meta property="og:description" content="Freelance ServiceNow solution and integration architect, delivering IT service management platforms since 2009.">
   <meta property="og:url" content="https://pedromenchero.github.io/">
+  <meta property="og:image" content="https://pedromenchero.github.io/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pedro Menchero, ServiceNow solution and integration architect, with a bar showing his career from 2009 to now">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,7 +29,12 @@
 <body>
   <header class="hero wrap">
     <h1 class="name">Pedro Menchero <span>García Olías</span></h1>
-    <p class="lede">ServiceNow solution and integration architect. I’ve designed and delivered IT service management platforms since 2009, for enterprises in Spain, the United Kingdom, the Netherlands and Brazil. Freelance since 2021.</p>
+    <p class="role">ServiceNow solution and integration architect</p>
+    <p class="lede">I design, integrate and govern ServiceNow platforms for enterprises such as BASF, Heineken and ING. In IT service management since 2009; freelance since 2021.</p>
+    <ul class="hero-facts">
+      <li>Based in Spain. Working remotely across Europe, on site when needed.</li>
+      <li>ServiceNow certified: CSA, CIS-ITSM, CIS-DF (CMDB and CSDM)</li>
+    </ul>
     <p class="actions">
       <a class="button" href="cv/pedro-menchero-cv.pdf">Download CV (PDF)</a>
       <span class="action-links">
@@ -40,51 +48,58 @@
         <li class="short" style="--m: 12">
           <a href="#job-rem">
             <span class="seg-name">REM<span class="visually-hidden"> Solutions</span></span>
-            <span class="visually-hidden">, 2009 to 2010</span>
+            <span class="visually-hidden">, developer, 2009 to 2010</span>
             <span class="seg-year" aria-hidden="true">2009</span>
+            <span class="seg-tip" aria-hidden="true"><strong>REM Solutions</strong> Developer<br>2009 – 2010</span>
           </a>
         </li>
-        <li class="minor" style="--m: 51">
+        <li class="minor wide" style="--m: 51">
           <a href="#job-devoteam-consultant">
             <span class="seg-name">Devoteam</span>
-            <span class="visually-hidden">, 2010 to 2014</span>
+            <span class="visually-hidden">, ITSM senior consultant, 2010 to 2014</span>
             <span class="seg-year" aria-hidden="true">2010</span>
+            <span class="seg-tip" aria-hidden="true"><strong>Devoteam</strong> ITSM senior consultant<br>2010 – 2014</span>
           </a>
         </li>
         <li class="short minor" style="--m: 11">
           <a href="#job-quintica">
             <span class="seg-name">Quintica</span>
-            <span class="visually-hidden">, 2014 to 2015</span>
+            <span class="visually-hidden">, ITSM solution architect, 2014 to 2015</span>
             <span class="seg-year" aria-hidden="true">2014</span>
+            <span class="seg-tip" aria-hidden="true"><strong>Quintica</strong> ITSM solution architect<br>2014 – 2015</span>
           </a>
         </li>
         <li style="--m: 24">
           <a href="#job-devoteam-manager">
             <span class="seg-name">Devoteam</span>
-            <span class="visually-hidden">, 2015 to 2017</span>
+            <span class="visually-hidden">, manager, 2015 to 2017</span>
             <span class="seg-year" aria-hidden="true">2015</span>
+            <span class="seg-tip" aria-hidden="true"><strong>Devoteam</strong> Manager<br>2015 – 2017</span>
           </a>
         </li>
         <li class="minor" style="--m: 22">
           <a href="#job-deloitte">
             <span class="seg-name">Deloitte</span>
-            <span class="visually-hidden">, 2017 to 2019</span>
+            <span class="visually-hidden">, manager, 2017 to 2019</span>
             <span class="seg-year" aria-hidden="true">2017</span>
+            <span class="seg-tip" aria-hidden="true"><strong>Deloitte</strong> Manager<br>2017 – 2019</span>
           </a>
         </li>
         <li style="--m: 20">
           <a href="#job-plat4mation">
             <span class="seg-name">Plat4mation</span>
-            <span class="visually-hidden">, 2019 to 2021</span>
+            <span class="visually-hidden">, senior manager, 2019 to 2021</span>
             <span class="seg-year" aria-hidden="true">2019</span>
+            <span class="seg-tip" aria-hidden="true"><strong>Plat4mation</strong> Senior manager<br>2019 – 2021</span>
           </a>
         </li>
-        <li class="current minor" style="--m: 70" data-since="2021-01">
+        <li class="current minor wide" style="--m: 70" data-since="2021-01">
           <a href="#job-freelance">
             <span class="seg-name">Freelance</span>
-            <span class="visually-hidden">, 2021 to now</span>
+            <span class="visually-hidden">, integration and solution architect, 2021 to now</span>
             <span class="seg-year" aria-hidden="true">2021</span>
             <span class="seg-now" aria-hidden="true">Now</span>
+            <span class="seg-tip" aria-hidden="true"><strong>Freelance</strong> Integration and solution architect<br>2021 – now</span>
           </a>
         </li>
       </ol>
@@ -96,19 +111,115 @@
       <h2 id="about-h">About</h2>
       <div class="section-body prose">
         <p>I design and integrate ServiceNow platforms for multinational and local enterprises, and lead the teams that build them. My work sits between architecture and delivery: setting technical governance and platform standards, designing integrations, and working with C-level executives to shape solutions around how their business actually runs.</p>
-        <p>I’ve directed large, multicultural teams in four countries, and I mentor developers and consultants in ServiceNow best practice.</p>
+        <p>I’ve directed large, multicultural teams in Spain, the United Kingdom, the Netherlands and Brazil, and I mentor developers and consultants in ServiceNow best practice.</p>
+        <dl class="facts">
+          <div>
+            <dt>Practice areas</dt>
+            <dd>Solution architecture, integrations, IT service management, CMDB and CSDM, customer service management, workplace service management, agile delivery</dd>
+          </div>
+          <div>
+            <dt>Platforms and frameworks</dt>
+            <dd>ServiceNow, BMC Remedy, ITIL 4, Scrum, DevOps</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>Spanish (native), English (professional)</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>Computer Science degree, Universidad Complutense de Madrid</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section wrap" id="experience" aria-labelledby="experience-h">
+      <h2 id="experience-h">Experience</h2>
+      <div class="section-body">
+        <ol class="jobs">
+          <li class="job" id="job-freelance">
+            <p class="job-dates">2021 – present</p>
+            <div class="job-detail">
+              <h3 class="job-org">Freelance<span>, multiple clients</span></h3>
+              <p class="job-role">Integration and solution architect</p>
+              <p class="job-summary">Brought in to design integrations, set technical governance and keep enterprise ServiceNow platforms healthy as they grow. I set architecture standards, review platform capabilities against best practice, and mentor the development teams who build on them.</p>
+              <ul class="projects">
+                <li><strong>BASF.</strong> Architecting a federated CMDB fed by more than 150 interfaces, replacing legacy third-party applications.</li>
+                <li><strong>Heineken.</strong> Taking the platform I started at Plat4mation further by integrating it with the rest of Heineken’s application portfolio.</li>
+                <li><strong>Workplace Service Delivery.</strong> Solution architect on several implementations of ServiceNow’s workplace suite for different clients.</li>
+                <li><strong>Deloitte.</strong> Technical adviser and solution architect on multiple ServiceNow engagements.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job" id="job-plat4mation">
+            <p class="job-dates">2019 – 2021</p>
+            <div class="job-detail">
+              <h3 class="job-org">Plat4mation<span>, Netherlands</span></h3>
+              <p class="job-role">Senior manager</p>
+              <p class="job-summary">Led ServiceNow delivery and key client relationships: workshops, technical consulting across IT service, IT business and customer service management, and project scoping. Managed and appraised a multicultural team and mentored new joiners.</p>
+              <ul class="projects">
+                <li><strong>Heineken.</strong> Architected a custom lean manufacturing application, rolled out to more than 100 breweries in two years.</li>
+                <li><strong>ServiceNow.</strong> Delivered knowledge management for ServiceNow’s own Field Security department, with contextual search inside Slack.</li>
+                <li><strong>ING.</strong> Advised on integration best practice across an ecosystem of 12 ServiceNow instances.</li>
+                <li><strong>TBI.</strong> Advised the client on ITSM processes and ServiceNow.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job" id="job-deloitte">
+            <p class="job-dates">2017 – 2019</p>
+            <div class="job-detail">
+              <h3 class="job-org">Deloitte<span>, Spain</span></h3>
+              <p class="job-role">Manager</p>
+              <p class="job-summary">Helped grow Deloitte’s ServiceNow practice in Spain. Ran engagements end to end, from presales and proofs of concept to go-live support, and built the teams to deliver them.</p>
+              <ul class="projects">
+                <li><strong>Bankia.</strong> Assessed process gaps and performance issues for the CEO, then replaced 8 legacy applications with ServiceNow Customer Service Management.</li>
+                <li><strong>CaixaBank.</strong> Introduced ServiceNow customer service management for incidents and claims on appliances sold through the bank.</li>
+                <li><strong>Banco Santander.</strong> Designed the integration between ServiceNow IT business management, SAP and third-party project tools.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job" id="job-devoteam-manager">
+            <p class="job-dates">2015 – 2017</p>
+            <div class="job-detail">
+              <h3 class="job-org">Devoteam<span>, Spain</span></h3>
+              <p class="job-role">Manager</p>
+              <p class="job-summary">Ran large multinational ServiceNow projects from scoping to go-live, and supported presales with proposals, proofs of concept and demos. Set KPIs and delivery standards for the PMO, and recruited and trained developers.</p>
+              <ul class="projects">
+                <li><strong>SICPA.</strong> Rolled out ITSM, Field Service and Event Management for the Swiss security-ink company, coordinating teams in Madrid, Luxembourg and Switzerland.</li>
+                <li><strong>Inversis.</strong> Replaced the bank’s custom applications with ServiceNow ITSM and ITBM, and introduced ITIL processes.</li>
+                <li><strong>Devoteam.</strong> Created the standard software development lifecycle used across the company’s IT projects.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="earlier-h">Earlier roles</h3>
+        <ol class="earlier">
+          <li class="early" id="job-quintica">
+            <p class="job-dates">2014 – 2015</p>
+            <p><strong>Quintica</strong>, United Kingdom. ITSM solution architect: integration architecture connecting BMC Remedy, legacy systems and mainframe applications for Arqiva.</p>
+          </li>
+          <li class="early" id="job-devoteam-consultant">
+            <p class="job-dates">2010 – 2014</p>
+            <p><strong>Devoteam</strong>, Spain. ITSM senior consultant: BMC Remedy projects for Telefónica International (including a secondment to Brazil), Banco Santander, RENFE and Mercadona.</p>
+          </li>
+          <li class="early" id="job-rem">
+            <p class="job-dates">2009 – 2010</p>
+            <p><strong>REM Solutions</strong>, Spain. Developer: built, configured and supported BMC Remedy modules.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <section class="section wrap" id="certifications" aria-labelledby="certifications-h">
-      <h2 id="certifications-h">Certifications and education</h2>
+      <h2 id="certifications-h">Certifications</h2>
       <div class="section-body lists creds">
         <div>
           <h3>ServiceNow</h3>
           <ul>
-            <li><strong>Certified Implementation Specialist – Data Foundations (CMDB and CSDM)</strong> CIS-DF, 2026</li>
-            <li><strong>Certified Implementation Specialist – IT Service Management</strong> CIS-ITSM, 2020</li>
-            <li><strong>Certified System Administrator</strong> CSA, 2019</li>
+            <li><strong>CIS-DF</strong> Certified Implementation Specialist – Data Foundations (CMDB and CSDM), 2026</li>
+            <li><strong>CIS-ITSM</strong> Certified Implementation Specialist – IT Service Management, 2020</li>
+            <li><strong>CSA</strong> Certified System Administrator, 2019</li>
           </ul>
         </div>
         <div>
@@ -117,140 +228,6 @@
             <li><strong>ITIL 4</strong></li>
             <li><strong>ITIL Foundation</strong></li>
             <li><strong>DevOps Foundation and Scrum Management</strong> Tecnofor, Spain</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Education</h3>
-          <ul>
-            <li><strong>Computer Science degree</strong> Universidad Complutense de Madrid</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section wrap" id="experience" aria-labelledby="experience-h">
-      <h2 id="experience-h">Experience</h2>
-      <ol class="section-body jobs">
-        <li class="job" id="job-freelance">
-          <p class="job-dates">2021 – present</p>
-          <div class="job-detail">
-            <h3 class="job-org">Freelance<span>, multiple clients</span></h3>
-            <p class="job-role">Integration and solution architect</p>
-            <p class="job-summary">Brought in to design integrations, set technical governance and keep enterprise ServiceNow platforms healthy as they grow. I set architecture standards, review platform capabilities against best practice, and mentor the development teams who build on them.</p>
-            <ul class="projects">
-              <li><strong>BASF.</strong> Architecting a federated CMDB fed by more than 150 interfaces, replacing legacy third-party applications.</li>
-              <li><strong>Heineken.</strong> Taking the platform I started at Plat4mation further by integrating it with the rest of Heineken’s application portfolio.</li>
-              <li><strong>Workplace Service Delivery.</strong> Solution architect on several implementations of ServiceNow’s workplace suite for different clients.</li>
-              <li><strong>Deloitte.</strong> Technical adviser and solution architect on multiple ServiceNow engagements.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="job" id="job-plat4mation">
-          <p class="job-dates">2019 – 2021</p>
-          <div class="job-detail">
-            <h3 class="job-org">Plat4mation<span>, Netherlands</span></h3>
-            <p class="job-role">Senior manager</p>
-            <p class="job-summary">Led ServiceNow delivery and key client relationships: workshops, technical consulting across IT service, IT business and customer service management, and project scoping. Managed and appraised a multicultural team and mentored new joiners.</p>
-            <ul class="projects">
-              <li><strong>Heineken.</strong> Architected a custom lean manufacturing application, rolled out to more than 100 breweries in two years.</li>
-              <li><strong>ServiceNow.</strong> Delivered knowledge management for ServiceNow’s own Field Security department, with contextual search inside Slack.</li>
-              <li><strong>ING.</strong> Advised on integration best practice across an ecosystem of 12 ServiceNow instances.</li>
-              <li><strong>TBI.</strong> Advised the client on ITSM processes and ServiceNow.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="job" id="job-deloitte">
-          <p class="job-dates">2017 – 2019</p>
-          <div class="job-detail">
-            <h3 class="job-org">Deloitte<span>, Spain</span></h3>
-            <p class="job-role">Manager</p>
-            <p class="job-summary">Helped grow Deloitte’s ServiceNow practice in Spain. Ran engagements end to end, from presales and proofs of concept to go-live support, and built the teams to deliver them.</p>
-            <ul class="projects">
-              <li><strong>Bankia.</strong> Assessed process gaps and performance issues for the CEO, then replaced 8 legacy applications with ServiceNow Customer Service Management.</li>
-              <li><strong>CaixaBank.</strong> Introduced ServiceNow customer service management for incidents and claims on appliances sold through the bank.</li>
-              <li><strong>Banco Santander.</strong> Designed the integration between ServiceNow IT business management, SAP and third-party project tools.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="job" id="job-devoteam-manager">
-          <p class="job-dates">2015 – 2017</p>
-          <div class="job-detail">
-            <h3 class="job-org">Devoteam<span>, Spain</span></h3>
-            <p class="job-role">Manager</p>
-            <p class="job-summary">Ran large multinational ServiceNow projects from scoping to go-live, and supported presales with proposals, proofs of concept and demos. Set KPIs and delivery standards for the PMO, and recruited and trained developers.</p>
-            <ul class="projects">
-              <li><strong>SICPA.</strong> Rolled out ITSM, Field Service and Event Management for the Swiss security-ink company, coordinating teams in Madrid, Luxembourg and Switzerland.</li>
-              <li><strong>Inversis.</strong> Replaced the bank’s custom applications with ServiceNow ITSM and ITBM, and introduced ITIL processes.</li>
-              <li><strong>Devoteam.</strong> Created the standard software development lifecycle used across the company’s IT projects.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="job" id="job-quintica">
-          <p class="job-dates">2014 – 2015</p>
-          <div class="job-detail">
-            <h3 class="job-org">Quintica<span>, United Kingdom</span></h3>
-            <p class="job-role">ITSM solution architect</p>
-            <p class="job-summary">Set integration requirements and design standards for BMC Remedy and third-party systems, and owned the CMDB data model.</p>
-            <ul class="projects">
-              <li><strong>Arqiva.</strong> Designed and led the integration architecture connecting BMC Remedy, legacy systems and mainframe-synchronised applications for the UK broadcast and telecoms infrastructure company.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="job" id="job-devoteam-consultant">
-          <p class="job-dates">2010 – 2014</p>
-          <div class="job-detail">
-            <h3 class="job-org">Devoteam<span>, Spain</span></h3>
-            <p class="job-role">ITSM senior consultant</p>
-            <p class="job-summary">Grew into project management and solution architecture on BMC Remedy: requirements workshops, deployments, CMDB design and telephony integration.</p>
-            <ul class="projects">
-              <li><strong>Telefónica International.</strong> Built a worldwide service catalogue on BMC Remedy, including a secondment to Brazil for a high-profile customer.</li>
-              <li><strong>Banco Santander.</strong> Implemented ITIL incident, problem and change management.</li>
-              <li><strong>RENFE.</strong> Designed how Spain’s national railway manages critical incidents such as natural disasters and accidents.</li>
-              <li><strong>Mercadona.</strong> Integrated BMC Remedy with Cisco VoIP telephony to speed up incident response and resolution.</li>
-            </ul>
-          </div>
-        </li>
-        <li class="job" id="job-rem">
-          <p class="job-dates">2009 – 2010</p>
-          <div class="job-detail">
-            <h3 class="job-org">REM Solutions<span>, Spain</span></h3>
-            <p class="job-role">Developer</p>
-            <p class="job-summary">Built, configured and supported (level 3) BMC Remedy modules for incident, change, CMDB and service request management.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section class="section wrap" id="expertise" aria-labelledby="expertise-h">
-      <h2 id="expertise-h">Expertise</h2>
-      <div class="section-body lists">
-        <div>
-          <h3>Practice areas</h3>
-          <ul>
-            <li>Solution architecture</li>
-            <li>Integrations</li>
-            <li>IT service management</li>
-            <li>CMDB and CSDM</li>
-            <li>Customer service management</li>
-            <li>Workplace service management</li>
-            <li>Agile delivery</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Platforms and frameworks</h3>
-          <ul>
-            <li>ServiceNow</li>
-            <li>BMC Remedy</li>
-            <li>ITIL 4</li>
-            <li>Scrum</li>
-            <li>DevOps</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Languages</h3>
-          <ul>
-            <li>Spanish, native</li>
-            <li>English, professional</li>
           </ul>
         </div>
       </div>

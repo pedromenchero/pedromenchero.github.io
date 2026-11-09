@@ -77,11 +77,29 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .name span { display: block; }
 
+/* The job title, in the name's typeface but lighter, so the specialty
+   is read in the same glance as the name */
+.role {
+  margin-top: clamp(0.6rem, 1.5vw, 1rem);
+  font-size: clamp(1.75rem, 4.6vw, 3.25rem);
+  font-weight: 400;
+  font-stretch: 62%;
+  line-height: 1.05;
+}
+
 .lede {
   max-width: 36rem;
-  margin-top: clamp(1.5rem, 3vw, 2.25rem);
-  font-size: clamp(1.1875rem, 2vw, 1.375rem);
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.125rem, 1.8vw, 1.3125rem);
   line-height: 1.45;
+}
+
+.hero-facts {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 1rem;
+  color: var(--slate);
+  font-size: 0.9375rem;
 }
 
 .actions {
@@ -137,8 +155,8 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* One-year roles get a tighter label so the name still fits */
 .career-bar .short a {
-  padding-inline: 0.3rem;
-  font-size: 0.75rem;
+  padding-inline: 0.35rem;
+  font-size: 0.8125rem;
   font-stretch: 62%;
 }
 
@@ -165,6 +183,34 @@ a:hover { text-decoration-thickness: 2px; }
 .seg-year { left: 0; }
 .seg-now { right: 0; color: var(--ink); font-weight: 600; }
 
+/* Hovering or focusing a block shows the role and dates above it */
+.seg-tip {
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: 0;
+  z-index: 2;
+  width: max-content;
+  max-width: 16rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 3px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  font-stretch: 100%;
+  line-height: 1.35;
+  opacity: 0;
+  pointer-events: none;
+}
+.seg-tip strong { display: block; font-weight: 650; }
+.career-bar .current .seg-tip { left: auto; right: 0; }
+.career-bar a:hover .seg-tip,
+.career-bar a:focus-visible .seg-tip { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .seg-tip { transition: opacity 0.15s ease-out; }
+}
+
 /* The brass "now" tick at the end of the current segment */
 .career-bar .current a::after {
   content: "";
@@ -185,9 +231,10 @@ a:hover { text-decoration-thickness: 2px; }
   }
 }
 
+/* The top inset leaves room for the tooltip once the bar has drawn */
 @keyframes play {
-  from { clip-path: inset(-1rem 100% -2.5rem 0); }
-  to   { clip-path: inset(-1rem -1rem -2.5rem 0); }
+  from { clip-path: inset(-6rem 100% -2.5rem 0); }
+  to   { clip-path: inset(-6rem -1rem -2.5rem 0); }
 }
 @keyframes arrive {
   from { opacity: 0; transform: scaleY(0.2); }
@@ -206,8 +253,9 @@ a:hover { text-decoration-thickness: 2px; }
   }
 }
 
+/* On phones only the two longest blocks are wide enough for a name */
 @media (max-width: 44.99rem) {
-  .seg-name {
+  .career-bar li:not(.wide) .seg-name {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -287,8 +335,8 @@ a:hover { text-decoration-thickness: 2px; }
   white-space: nowrap;
 }
 
+/* Green is kept for things you can click, so the title is plain ink */
 .job-role {
-  color: var(--forest);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -305,7 +353,34 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .projects strong { font-weight: 650; }
 
+/* Earlier roles: one line each, so recent work gets the space */
+.earlier-h {
+  margin-top: 2.25rem;
+  color: var(--slate);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.early {
+  position: relative;
+  display: grid;
+  gap: 0.15rem;
+  padding-block: 0.85rem;
+  scroll-margin-top: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.early p:last-child { max-width: var(--measure); }
+.early strong { font-weight: 650; }
+
+@media (min-width: 40rem) {
+  .early {
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 /* Arriving from the career bar marks the job in brass */
+.early:target::before,
 .job:target::before {
   content: "";
   position: absolute;
@@ -316,8 +391,29 @@ a:hover { text-decoration-thickness: 2px; }
   background: var(--brass);
 }
 .job:first-child:target::before { top: 0; }
+.early:target::before { top: 0.85rem; bottom: 0.85rem; }
 
-/* Expertise -------------------------------------------------------- */
+/* About facts ------------------------------------------------------ */
+
+.facts {
+  display: grid;
+  margin-top: 2rem;
+}
+.facts div {
+  display: grid;
+  gap: 0.15rem;
+  padding-block: 0.75rem;
+  border-top: 1px solid var(--rule);
+}
+.facts dt { color: var(--slate); font-size: 0.9375rem; }
+.facts dd { margin: 0; }
+
+@media (min-width: 40rem) {
+  .facts div { grid-template-columns: 11rem minmax(0, 1fr); gap: 1.5rem; }
+  .facts dt { padding-top: 0.1rem; }
+}
+
+/* Lists (certifications) ------------------------------------------- */
 
 .lists {
   display: grid;
@@ -342,10 +438,19 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 500;
 }
 
-/* Certifications and education ------------------------------------ */
-
-.creds li { color: var(--slate); line-height: 1.45; }
-.creds li strong { display: block; color: var(--ink); font-weight: 600; }
+/* Certifications: the code recruiters search for leads, name follows */
+.creds li {
+  color: var(--slate);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.creds li strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
 
 /* References ------------------------------------------------------- */
 

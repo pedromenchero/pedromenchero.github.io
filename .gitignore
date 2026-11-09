@@ -50,3 +50,6 @@ fabric.properties
 .idea/modules.xml
 .idea/vcs.xml
 .idea/web autonomo.iml
+
+# JetBrains IDE project folder
+.idea/

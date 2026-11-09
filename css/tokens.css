@@ -1,6 +1,17 @@
 /* Shared design tokens for the website (index.html) and the CV (cv/index.html).
    Change the palette here and both follow. */
 
+/* Archivo, self-hosted (SIL Open Font License, see fonts/OFL.txt).
+   One variable file covers weights 100-900 and widths 62-125%. */
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo-latin-wdth-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --paper: #fbfbf9;
   --ink: #1e2623;

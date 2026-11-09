@@ -180,7 +180,7 @@ section { padding-top: 3.5mm; border-top: 0.3mm solid var(--rule); margin-top: 3
   break-inside: avoid;
 }
 .projects strong { font-weight: 650; }
-.projects em { font-style: normal; color: var(--forest); }
+.projects em { font-style: normal; color: var(--slate); }
 
 /* Keep the last few lines of a job together across a page break */
 .summary { orphans: 3; widows: 3; }
