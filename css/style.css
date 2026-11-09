@@ -342,12 +342,10 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 500;
 }
 
-/* Education -------------------------------------------------------- */
+/* Certifications and education ------------------------------------ */
 
-.education { display: grid; gap: 1rem; max-width: var(--measure); }
-.education strong { display: block; font-weight: 600; }
-.education li { color: var(--slate); }
-.education li strong { color: var(--ink); }
+.creds li { color: var(--slate); line-height: 1.45; }
+.creds li strong { display: block; color: var(--ink); font-weight: 600; }
 
 /* References ------------------------------------------------------- */
 
