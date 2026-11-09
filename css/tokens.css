@@ -1,0 +1,37 @@
+/* Shared design tokens for the website (index.html) and the CV (cv/index.html).
+   Change the palette here and both follow. */
+
+:root {
+  --paper: #fbfbf9;
+  --ink: #1e2623;
+  --slate: #5f6b66;
+  --rule: #e1e7e4;
+  --forest: #1b4639;
+  --tint: #e4ece8;
+  --tint-hover: #d3e0da;
+  --brass: #a87a2a;
+  --on-forest: #ffffff;
+
+  --font: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  color-scheme: light dark;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1714;
+    --ink: #e3eae6;
+    --slate: #9aa8a1;
+    --rule: #24312c;
+    --forest: #8cc7af;
+    --tint: #1c2a25;
+    --tint-hover: #26382f;
+    --brass: #d4a852;
+    --on-forest: #0f1714;
+  }
+}
+
+/* The CV always prints in the light palette */
+@media print {
+  :root { color-scheme: light; }
+}

@@ -1,121 +1,15 @@
-function main() {
+// Keeps the page from going stale: the current role's block in the career bar
+// grows with the months since it started, and the footer shows this year.
+(function () {
+  var now = new Date();
 
-  (function() {
-    'use strict';
+  var current = document.querySelector('[data-since]');
+  if (current) {
+    var since = current.getAttribute('data-since').split('-');
+    var months = (now.getFullYear() - Number(since[0])) * 12 + (now.getMonth() + 1 - Number(since[1]));
+    if (months > 0) current.style.setProperty('--m', months);
+  }
 
-    $('a.page-scroll').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - 40
-          }, 900);
-          return false;
-        }
-      }
-    });
-
-    // affix the navbar after scroll below header
-    $('#nav').affix({
-      offset: {
-        top: $('header').height()
-      }
-    });
-
-    // skills chart
-    $(document).ready(function(e) {
-      //var windowBottom = $(window).height();
-      var index = 0;
-
-      // console.log($(window).height());
-      // console.log($('#skills-circles').position().top);
-
-      if ($(window).height() > $('#skills-circles').position().top) {
-        if (index == 0) {
-          $('.chart').easyPieChart({
-            easing: 'easeOutBounce',
-            barColor: '#629ca7',
-            onStep: function(from, to, percent) {
-              $(this.el).find('.percent').text(Math.round(percent));
-            }
-          });
-          index++;
-        }
-      }
-
-      $(document).scroll(function() {
-        var top = $('#about').outerHeight() + $(window).scrollTop();
-        var skills = $('#skills-circles').position().top;
-        // console.log("About > " + $('#about').height());
-        // console.log("Skills height > " + $('#skills-circles').height());
-        // console.log("Skills top > " + $('#skills-circles').position().top);
-        // console.log("Scroll Top > " + $(window).scrollTop());
-        // console.log("Top > " + top);
-        if (top >= skills * 1.05) {
-          if (index == 0) {
-            $('.chart').easyPieChart({
-              easing: 'easeOutBounce',
-              barColor: '#629ca7',
-              onStep: function(from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent));
-              }
-            });
-
-          }
-          index++;
-        }
-      })
-      //console.log(nagativeValue)
-    });
-
-
-    // Portfolio isotope filter
-    $(window).load(function() {
-      var $container = $('.portfolio-items');
-      $container.isotope({
-        filter: '*',
-        animationOptions: {
-          duration: 750,
-          easing: 'linear',
-          queue: false
-        }
-      });
-      $('.cat a').click(function() {
-        $('.cat .active').removeClass('active');
-        $(this).addClass('active');
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-          filter: selector,
-          animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-          }
-        });
-        return false;
-      });
-
-    });
-
-
-    // CounterUp
-    $(document).ready(function($) {
-      if ($("span.count").length > 0) {
-        $('span.count').counterUp({
-          delay: 10, // the delay time in ms
-          time: 1500 // the speed time in ms
-        });
-      }
-    });
-
-    // Pretty Photo
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-      social_tools: false
-    });
-
-  }());
-
-
-}
-main();
+  var year = document.getElementById('year');
+  if (year) year.textContent = now.getFullYear();
+})();
