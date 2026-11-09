@@ -354,8 +354,11 @@ a:hover { text-decoration-thickness: 2px; }
   gap: 2.5rem;
 }
 
+/* The long quote runs full width; the two short ones pair up below it */
 @media (min-width: 64rem) {
   .quotes { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .quote-wide { grid-column: 1 / -1; }
+  .quote-wide blockquote p { max-width: var(--measure); }
 }
 
 .quote blockquote p {
@@ -384,11 +387,15 @@ a:hover { text-decoration-thickness: 2px; }
   filter: grayscale(1);
 }
 
-.quote strong {
+/* The referee's name links to their LinkedIn profile */
+.quote figcaption a {
   display: block;
+  width: fit-content;
   color: var(--ink);
   font-weight: 600;
+  text-decoration-color: var(--rule);
 }
+.quote figcaption a:hover { text-decoration-color: currentColor; }
 
 /* Contact ---------------------------------------------------------- */
 
